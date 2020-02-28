@@ -8,10 +8,9 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Button x:Name="Сontent" ImageSource="">
-          
-          
-        </Button>
-
+        <Button x:Name="Сontent" ImageSource="moneta640.jpg"  Padding="0" Margin="0" Clicked="Сontent_Clicked"
+                />
+      
+    </StackLayout>
 
 </ContentPage>
