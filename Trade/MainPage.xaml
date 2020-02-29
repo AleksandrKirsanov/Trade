@@ -6,11 +6,22 @@
              mc:Ignorable="d"
              x:Class="Trade.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Button x:Name="Сontent" ImageSource="moneta640.jpg"  Padding="0" Margin="0" Clicked="Сontent_Clicked"
-                />
-      
-    </StackLayout>
+    <Grid  BackgroundColor="Blue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+            
+            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="Ris1" Margin="0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
+        <Button   x:Name="Oglavlenie" Padding="0"  Margin="0"  Clicked="Oglavlenie_Clicked"  BackgroundColor="Blue"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
+        
+        
+    </Grid>
 
+
+    
 </ContentPage>

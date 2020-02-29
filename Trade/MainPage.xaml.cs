@@ -16,12 +16,19 @@ namespace Trade
         public MainPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
+
+
             InitializeComponent();
+
+
+
+
+
         }
 
-        private async void Сontent_Clicked(object sender, EventArgs e)
+        private async void Oglavlenie_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Content());
+                  await Navigation.PushAsync(new Content());
         }
     }
 }
