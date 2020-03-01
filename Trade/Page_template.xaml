@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
+    
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -32,15 +33,17 @@
 
 
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2"> 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <Button Text="++" Grid.Column="0"/>
-            <Button Text="Сервис" Grid.Column="1"/>
-            <Button Text="--" Grid.Column="2"/>
+            <Button Text="Вперёд" Grid.Column="0"/>
+            <Button Text="Шрифт +" Grid.Column="1"/>
+            <Button Text="Шрифт - " Grid.Column="2"/>
+            <Button Text="Назад" Grid.Column="3"/>
         </Grid>
 
 
