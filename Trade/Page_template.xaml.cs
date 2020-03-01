@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Trade
+namespace Trade  // Шаблон для создания страницы с текстом. 
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page_template : ContentPage
@@ -16,5 +16,11 @@ namespace Trade
         {
             InitializeComponent();
         }
+
+       
+
+       
+        
+
     }
 }
