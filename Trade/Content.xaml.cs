@@ -17,5 +17,10 @@ namespace Trade
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
+
+        private async void Page2_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page_template());
+        }
     }
 }

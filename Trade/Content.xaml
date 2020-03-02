@@ -20,7 +20,7 @@
         <ScrollView>
 
             <StackLayout BackgroundColor="WhiteSmoke">
-                <Button x:Name="Page2" Text="Первая страница"></Button>
+                <Button x:Name="Page2" Text="Первая страница" Clicked="Page2_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>
                 <Button x:Name="Page4" Text="Третья страница"></Button>
             </StackLayout>

@@ -14,7 +14,9 @@ namespace Trade  // Шаблон для создания страницы с т�
     {
         public Page_template()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            PictureHeight.Height = 300;
         }
 
        
