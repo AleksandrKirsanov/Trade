@@ -16,24 +16,31 @@ namespace Trade
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            PictureHeight.Height = 300;
+            //PictureHeight.Height = 300;
 
-            //-------------------------------------------------
-            TopLabel.TextColor = Color.Red ;
-            TopLabel.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Button));
-            TopLabel.Text = "Его пример другим наука;\n" +
-             "Но, боже мой, какая скука\n" +
-             "С больным сидеть и день и ночь,\n" +
-             "Не отходя ни шагу прочь!\n";
+            ////-------------------------------------------------
+            //TopLabel.TextColor = Color.Red ;
+            //TopLabel.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Button));
+            //TopLabel.Text = "Его пример другим наука;\n" +
+            // "Но, боже мой, какая скука\n" +
+            // "С больным сидеть и день и ночь,\n" +
+            // "Не отходя ни шагу прочь!\n";
+
+
+
+            ////-------------------------------------------------
+            //BottonLabel.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+            //BottonLabel.Text =  "Его пример другим наука;\n" +
+            // "Но, боже мой, какая скука\n" +
+            // "С больным сидеть и день и ночь,\n" +
+            // "Не отходя ни шагу прочь!\n";
+
+            Str1 str1 = new Str1();
+            foreach (var lab in str1.Lcontent)
+            {
+                 ContPage.Children.Add(lab);
+            }
            
-
-
-            //-------------------------------------------------
-            BottonLabel.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
-            BottonLabel.Text =  "Его пример другим наука;\n" +
-             "Но, боже мой, какая скука\n" +
-             "С больным сидеть и день и ночь,\n" +
-             "Не отходя ни шагу прочь!\n";
         }
 
        

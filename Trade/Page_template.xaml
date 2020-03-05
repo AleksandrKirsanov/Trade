@@ -28,20 +28,11 @@
 
 
 
-        <ScrollView Grid.Row="1"> <!--Содержимое средней строки общего грида-->
-           
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="200" x:Name="PictureHeight"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label x:Name="TopLabel" TextType="Text"  Grid.Row="0" HorizontalTextAlignment="Center"/>
-                <Image x:Name="PictureContent" Grid.Row="1" Source="moneta640.jpg"  Aspect="Fill"/>
-                <Label x:Name="BottonLabel"  TextType="Text" Grid.Row="2"  />
+        <ScrollView  Grid.Row="1"> <!--Содержимое средней строки общего грида-->
+            <StackLayout x:Name="ContPage" Margin="10">
+                
+            </StackLayout>
 
-
-            </Grid>
             
         </ScrollView>
 
