@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Trade
 {
-   public class Str1 : Interface1
+   public class Str1 
     {
-       
 
+        List<string> LabelContent = new List<string>();
         public string TextPage { get; set; }
         public string Picture1 { get; set; }
         public string Picture { get; set; }

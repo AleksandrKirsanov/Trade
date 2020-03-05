@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Trade.Pages
 {
-    class Str3 : Interface1
+    class Str3 
     {
 
 

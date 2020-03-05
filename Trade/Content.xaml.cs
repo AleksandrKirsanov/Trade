@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace Trade
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Content : ContentPage
+    public partial class Content : ContentPage // страница оглавления книги
     {
         public Content()
         {
