@@ -20,6 +20,7 @@ namespace Trade
 
         private async void Page2_Clicked(object sender, EventArgs e)
         {
+            Str1 str1 = new Str1();
             await Navigation.PushAsync(new Page_template());
         }
     }
