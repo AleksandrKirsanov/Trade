@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using System.Xml;
+using System.IO;
+
 
 namespace Trade
 {
@@ -9,7 +11,8 @@ namespace Trade
 
       public  List<Xamarin.Forms.View> Lcontent = new List<Xamarin.Forms.View>();
 
-        
+        int NLabel = 1;
+        int NImage = 1;
 
         public Str1()
         {
@@ -77,22 +80,55 @@ namespace Trade
             //Lcontent.Add(Label4);
 
 
-            XmlDocument PageXML = new XmlDocument();
-            PageXML.Load("C:/Users/2013g/source/repos/Trade/Trade/Pages/XMLFile1.xml");
-            XmlElement xml = PageXML.DocumentElement;
-            foreach (XmlNode item in xml)
-            {
-                if (item.Attributes.Count>0)
-                {
-                    XmlNode attr = item.Attributes.GetNamedItem("name");
-                    if (attr!=null)
-                    {
 
-                    }
+            XmlTextReader reader = new XmlTextReader("XMLFile1.xml");
+            reader.WhitespaceHandling = WhitespaceHandling.None; // пропускаем пустые узлы
+            while (reader.Read())
+            {
+                if (reader.Name == "name")
+                {
+                    Label label = new Label();
+                    Lcontent.Add(label);
                 }
+            }
+
+            int x = 2;
+
+            //foreach (XmlNode item in xml)
+            //{
+            //    if (item.Attributes.Count>0)
+            //    {
+            //        XmlNode attr = item.Attributes.GetNamedItem("name");
+            //        if (attr!=null)
+            //            if (attr.Value == "label")
+            //            {
+            //                Label label = new Label();
+            //                foreach (XmlNode item1 in item.ChildNodes)
+            //                {
+            //                    if (item1.Name == "text")
+            //                    {
+            //                        label.Text = item1.InnerText;
+            //                    }
+            //                    if (item1.Name == "Green")
+            //                    {
+            //                        label.TextColor = Color.Green;
+            //                    }
+            //                    if (item1.Name == "TextAlignment")
+            //                    {
+            //                        label.HorizontalTextAlignment = TextAlignment.Center;
+            //                    }
+
+            //                    Lcontent.Add(label);
+
+            //                }
+
+
+            //            }
+            //        }
+            //    }
             }
 
 
         }
     }
-}
+
