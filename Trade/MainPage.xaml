@@ -5,23 +5,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Trade.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="20,5,20,5"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-    <Grid  BackgroundColor="Blue">
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-            
-            
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="585"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <Image x:Name="Ris1" Margin="0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
-        <Button   x:Name="Oglavlenie" Padding="0"  Margin="0"  Clicked="Oglavlenie_Clicked"  BackgroundColor="Blue"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" TextColor="White" FontSize="Large" HorizontalOptions="Center"/>
-        
-        
+        <Button   x:Name="Oglavlenie"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" Clicked="Oglavlenie_Clicked" />
+
+
     </Grid>
 
 
-    
+
 </ContentPage>

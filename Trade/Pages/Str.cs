@@ -19,24 +19,42 @@ namespace Trade
         public Str(int pageNumber)
         {
 
-            switch (pageNumber)
+            switch (pageNumber) // выбор метода который построит содержимое страницы
             {
-                case 1:
+                case 1: // построение содержимого страницы 1
                     str1();
                     break;
-                case 2:
+                case 2: // построение содержимого страницы 2
                     str1();
+                    break;
+                case 3: // построение содержимого страницы 3
+                    str1(); 
                     break;
                 default:
+                    str0();
                     break;
-            }
+            } 
 
 
 
 
         }
 
-        void str1()
+        void str0()// Номер страницы не определён
+        {
+            Label label = new Label
+            {
+                Text = "Номер страницы не определён",
+                FontSize = GlobalValue.MyFontSizeTitle,
+                TextColor = Color.Red,
+                HorizontalTextAlignment = TextAlignment.Center
+            };
+            Label Label1 = label;
+            Lcontent.Add(Label1);
+        }
+
+
+        void str1() //Страница 1   
         {
             Label Label1 = new Label
             {
@@ -100,7 +118,7 @@ namespace Trade
             };
             Lcontent.Add(Label4);
 
-        }
+        } 
 
 
     }
