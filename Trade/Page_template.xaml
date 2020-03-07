@@ -5,23 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
-    
-    <Grid > <!--Общий грид на всю страницу--> 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid  > <!--Общий грид на всю страницу--> 
         <Grid.RowDefinitions> <!--Строки общего грида-->
             <RowDefinition Height="40"/> 
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0"> <!--Грид в верхней строке общего грида-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition />
+
             </Grid.ColumnDefinitions>
-            <Button Text="++" Grid.Column="0"/>
-            <Button Text="Оглавление" Grid.Column="1"/>
-            <Button Text="--" Grid.Column="2"/>
+            <Label x:Name="Titl" Text="Страница" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough"/>
         </Grid>
         
         
@@ -29,7 +30,9 @@
 
 
         <ScrollView  Grid.Row="1"> <!--Содержимое средней строки общего грида-->
-            <StackLayout x:Name="ContPage" Margin="10">
+            
+            <StackLayout x:Name="ContPage" Margin="10" >
+                
                 
             </StackLayout>
 
@@ -45,9 +48,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <Button Text="Вперёд" Grid.Column="0"/>
-            <Button Text="Шрифт+" Grid.Column="1"/>
-            <Button Text="Шрифт- " Grid.Column="2"/>
+            <Button x:Name="forward" Text="Вперёд" Grid.Column="0" />
+            <Button x:Name="IncreaseFont" Text="Шрифт+" Grid.Column="1" Clicked="IncreaseFont_Clicked" />
+            <Button x:Name="ReduceFont" Text="Шрифт- " Grid.Column="2" Clicked="ReduceFont_Clicked"/>
             <Button Text="Назад" Grid.Column="3"/>
         </Grid>
 
