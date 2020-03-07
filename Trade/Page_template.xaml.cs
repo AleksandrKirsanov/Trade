@@ -12,13 +12,13 @@ namespace Trade
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page_template : ContentPage  // Шаблон для создания страницы с текстом. 
     {
-        public Page_template()
+        public Page_template(int page)
         {
             NavigationPage.SetHasNavigationBar(this, false);
            
              InitializeComponent();
 
-           Str1 str1 = new Str1();
+           Str str1 = new Str(page);
 
             foreach (var lab in str1.Lcontent)
             {

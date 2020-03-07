@@ -62,6 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,10 +106,13 @@
     <AndroidResource Include="Resources\drawable\moneta640.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\xmlfile1.xml" />
+    <AndroidAsset Include="Assets\XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\XMLFile1.xml" />
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
