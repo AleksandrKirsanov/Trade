@@ -10,8 +10,8 @@
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="20,5,20,5"/>
                 <Setter Property="BackgroundColor" Value="Gray"/>
-                <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="Large"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
         </ResourceDictionary>

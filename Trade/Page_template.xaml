@@ -6,27 +6,29 @@
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
     <ContentPage.Resources>
-        <ResourceDictionary>
-
-        </ResourceDictionary>
+        <StyleSheet Source="MyStyle.css" />
+        <!--<Style TargetType="Button">
+            --><!--<Setter Property="BackgroundColor" Value="Red"/>--><!--
+            
+        </Style>-->  
     </ContentPage.Resources>
-    <Grid  > <!--Общий грид на всю страницу--> 
-        <Grid.RowDefinitions> <!--Строки общего грида-->
-            <RowDefinition Height="40"/> 
+    <Grid  > <!--Общий грид на всю страницу-->
+        <Grid.RowDefinitions>
+            <!--Строки общего грида-->
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0"> <!--Грид в верхней строке общего грида-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
 
             </Grid.ColumnDefinitions>
-            <Label x:Name="Titl" Text="Страница" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough"/>
+            <Label Text="Страница" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough" FontSize="Title"/>
         </Grid>
         
-        
-
+          
 
 
         <ScrollView  Grid.Row="1"> <!--Содержимое средней строки общего грида-->
@@ -43,15 +45,15 @@
 
         <Grid Grid.Row="2"> <!--Грид в нижней строке общего грида-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+             
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+               
             </Grid.ColumnDefinitions>
-            <Button x:Name="forward" Text="Вперёд" Grid.Column="0" />
-            <Button x:Name="IncreaseFont" Text="Шрифт+" Grid.Column="1" Clicked="IncreaseFont_Clicked" />
-            <Button x:Name="ReduceFont" Text="Шрифт- " Grid.Column="2" Clicked="ReduceFont_Clicked"/>
-            <Button Text="Назад" Grid.Column="3"/>
+            
+            <Button x:Name="IncreaseFont" Text="Вперёд" Grid.Column="0" Clicked="IncreaseFont_Clicked" />
+            <Button x:Name="ReduceFont" Text="Назад" Grid.Column="1" Clicked="ReduceFont_Clicked"/>
+            
         </Grid>
 
 
