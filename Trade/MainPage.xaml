@@ -8,11 +8,14 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Button">
-                <Setter Property="Margin" Value="20,5,20,5"/>
-                <Setter Property="BackgroundColor" Value="Gray"/>
+               
+                <Setter Property="BackgroundColor" Value="Aqua"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="10"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -24,8 +27,8 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="585"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Image x:Name="Ris1" Margin="0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
         <Button   x:Name="Oglavlenie"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" Clicked="Oglavlenie_Clicked" />

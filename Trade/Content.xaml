@@ -8,11 +8,15 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Button">
-                <Setter Property="Margin" Value="20,5,20,5"/>
-                <Setter Property="BackgroundColor" Value="Gray"/>
-                <Setter Property="TextColor" Value="Red"/>
-                <Setter Property="FontSize" Value="Large"/>
+
+                <Setter Property="BackgroundColor" Value="Aqua"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Default"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="2"/>
+               
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -21,6 +25,7 @@
         <ScrollView>
 
             <StackLayout BackgroundColor="WhiteSmoke">
+                <Button Text="Оглавление" FontSize="Title" TextColor="LightGray"/>
                 <Button x:Name="Page2" Text="Первая страница" Clicked="Page2_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>
                 <Button x:Name="Page4" Text="Третья страница"></Button>

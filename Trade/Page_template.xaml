@@ -6,14 +6,26 @@
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
     <ContentPage.Resources>
-        
+        <ResourceDictionary>
+            <Style TargetType="Button">
+
+                <Setter Property="BackgroundColor" Value="Aqua"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="3"/>
+               
+            </Style>
+        </ResourceDictionary>
     </ContentPage.Resources>
     <Grid  > <!--Общий грид на всю страницу-->
         <Grid.RowDefinitions>
             <!--Строки общего грида-->
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0"> <!--Грид в верхней строке общего грида-->
@@ -21,7 +33,7 @@
                 <ColumnDefinition />
 
             </Grid.ColumnDefinitions>
-            <Label x:Name="PageName" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough" FontSize="Title"/>
+            <Label x:Name="PageName" HorizontalTextAlignment="Center" TextColor="Green"  FontSize="Title"/>
         </Grid>
         
           
@@ -42,9 +54,9 @@
         <Grid Grid.Row="2"> <!--Грид в нижней строке общего грида-->
             <Grid.ColumnDefinitions>
              
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
             <Button x:Name="forward" Text="Вперёд" Grid.Column="2" Clicked="forward_Clicked" />
