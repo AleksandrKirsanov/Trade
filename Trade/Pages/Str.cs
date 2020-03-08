@@ -11,6 +11,7 @@ namespace Trade
 
 
 
+       public string NamePage { set; get; }
 
         public List<View> Lcontent = new List<View>();
 
@@ -18,6 +19,7 @@ namespace Trade
 
         public Str(int pageNumber)
         {
+           
 
             switch (pageNumber) // выбор метода который построит содержимое страницы
             {
@@ -42,6 +44,8 @@ namespace Trade
 
         void str0()// Номер страницы не определён
         {
+            NamePage = "Нулевая страница";
+
             Label label = new Label
             {
                 Text = "Номер страницы не определён",
@@ -56,6 +60,8 @@ namespace Trade
       
         void str1() //Страница 1   
         {
+            NamePage = "Первая страница";
+
             Label Label1 = new Label
             {
                 

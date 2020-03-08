@@ -6,11 +6,7 @@
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
     <ContentPage.Resources>
-        <StyleSheet Source="MyStyle.css" />
-        <!--<Style TargetType="Button">
-            --><!--<Setter Property="BackgroundColor" Value="Red"/>--><!--
-            
-        </Style>-->  
+        
     </ContentPage.Resources>
     <Grid  > <!--Общий грид на всю страницу-->
         <Grid.RowDefinitions>
@@ -25,7 +21,7 @@
                 <ColumnDefinition />
 
             </Grid.ColumnDefinitions>
-            <Label Text="Страница" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough" FontSize="Title"/>
+            <Label x:Name="PageName" HorizontalTextAlignment="Center" TextColor="Green" TextDecorations="Strikethrough" FontSize="Title"/>
         </Grid>
         
           
@@ -48,11 +44,12 @@
              
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-               
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            <Button x:Name="IncreaseFont" Text="Вперёд" Grid.Column="0" Clicked="IncreaseFont_Clicked" />
-            <Button x:Name="ReduceFont" Text="Назад" Grid.Column="1" Clicked="ReduceFont_Clicked"/>
+
+            <Button x:Name="forward" Text="Вперёд" Grid.Column="2" Clicked="forward_Clicked" />
+            <Button x:Name="Context" Text="Оглавление" Grid.Column="1" Clicked="Context_Clicked"/>
+            <Button x:Name="back" Text="Назад" Grid.Column="0" Clicked="back_Clicked"/>
             
         </Grid>
 

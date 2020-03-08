@@ -12,12 +12,12 @@ namespace Trade
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page_template : ContentPage  // Шаблон для создания страницы с текстом. 
     {
-        int PageContent = 0;
+       
         public Page_template(int page)
         {
             
             NavigationPage.SetHasNavigationBar(this, false);
-            PageContent = page;
+           
             InitializeComponent();
 
             Str str1 = new Str(page);
@@ -26,31 +26,32 @@ namespace Trade
             {
                 ContPage.Children.Add(lab);
             }
-            
-           
+
+            PageName.Text = str1.NamePage;
 
         }
 
-        private void IncreaseFont_Clicked(object sender, EventArgs e)
+        private async void forward_Clicked(object sender, EventArgs e)
         {
-            
+            if (GlobalValue.Page < 255) GlobalValue.Page++;
+            {
+
+            }
+            await Navigation.PushAsync(new Page_template(GlobalValue.Page));
         }
 
-
-
-
-
-
-
-        
-        private void ReduceFont_Clicked(object sender, EventArgs e)
+        private async void back_Clicked(object sender, EventArgs e)
         {
-           
+            if (GlobalValue.Page >0) GlobalValue.Page--;
+            {
 
-
+            }
+            await Navigation.PushAsync(new Page_template(GlobalValue.Page));
         }
 
-
-
+        private async void Context_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Content());
+        }
     }
 }
