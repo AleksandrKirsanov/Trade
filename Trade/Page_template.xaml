@@ -5,31 +5,41 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Trade.Page_template">
-    
-    <Grid > <!--Общий грид на всю страницу--> 
-        <Grid.RowDefinitions> <!--Строки общего грида-->
-            <RowDefinition Height="40"/> 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-        
-        <Grid Grid.Row="0"> <!--Грид в верхней строке общего грида-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-            <Button Text="++" Grid.Column="0"/>
-            <Button Text="Оглавление" Grid.Column="1"/>
-            <Button Text="--" Grid.Column="2"/>
-        </Grid>
-        
-        
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
 
+                <Setter Property="BackgroundColor" Value="Aqua"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="2"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid  > <!--Общий грид на всю страницу-->
+        <Grid.RowDefinitions>
+            <!--Строки общего грида-->
+            <RowDefinition Height="auto"  />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+
+            <Label x:Name="PageName" HorizontalTextAlignment="Center" TextColor="Green"  FontSize="Title" Grid.Row="0"/>
+        
+        
+          
 
 
         <ScrollView  Grid.Row="1"> <!--Содержимое средней строки общего грида-->
-            <StackLayout x:Name="ContPage" Margin="10">
+            
+            <StackLayout x:Name="ContPage"  >
+                
                 
             </StackLayout>
 
@@ -40,15 +50,17 @@
 
         <Grid Grid.Row="2"> <!--Грид в нижней строке общего грида-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+             
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button Text="Вперёд" Grid.Column="0"/>
-            <Button Text="Шрифт+" Grid.Column="1"/>
-            <Button Text="Шрифт- " Grid.Column="2"/>
-            <Button Text="Назад" Grid.Column="3"/>
+
+            <Button x:Name="forward" Text="+" Grid.Column="2" Clicked="forward_Clicked" FontAttributes="Bold"
+                    />
+            <Button x:Name="Context" Text="Оглавление" Grid.Column="1" Clicked="Context_Clicked" />
+            <Button x:Name="back" Text="-" Grid.Column="0" Clicked="back_Clicked" FontAttributes="Bold" />
+            
         </Grid>
 
 
