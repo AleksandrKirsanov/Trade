@@ -8,7 +8,7 @@ namespace Trade.Pages
     {
 
 
-        public string TextPage { get; set; }
+        public string TextPage { get;   set; }
         public string Picture1 { get; set; }
         public string Picture { get; set; }
 
