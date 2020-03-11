@@ -74,6 +74,50 @@ namespace Trade
             };
             Lcontent.Add(Label1);
             //----------------------------------------------------------------------------
+            Grid myGrid = new Grid();
+          
+            ColumnDefinition colDef1 = new ColumnDefinition();
+            ColumnDefinition colDef2 = new ColumnDefinition();
+            myGrid.Padding = 5;
+            myGrid.Margin = 3;
+            myGrid.BackgroundColor = Color.Aqua;
+            
+           
+
+            Label label4 = new Label
+            {
+                Text = "Его пример другим наука;\n" +
+             "Но, боже мой, какая скука\n" +
+             "С больным сидеть и день и ночь,\n" +
+             "Не отходя ни шагу прочь!\n",
+                FontSize = GlobalValue.MyFontSizeLabel,
+                TextColor = Color.Red,
+                HorizontalTextAlignment = TextAlignment.Center
+            };
+
+
+            Label label5= new Label
+            {
+                Text = "Его пример другим наука;\n" +
+             "Но, боже мой, какая скука\n" +
+             "С больным сидеть и день и ночь,\n" +
+             "Не отходя ни шагу прочь!\n",
+                FontSize = GlobalValue.MyFontSizeLabel,
+                TextColor = Color.Magenta,
+                HorizontalTextAlignment = TextAlignment.Center
+                
+            };
+
+            Grid.SetColumn(label4, 0);
+            Grid.SetColumn(label5, 1);
+            myGrid.ColumnDefinitions.Add(colDef1);
+            myGrid.ColumnDefinitions.Add(colDef2);
+            myGrid.Children.Add(label4);
+            myGrid.Children.Add(label5);
+
+            Lcontent.Add(myGrid);
+
+
 
 
             Image image1 = new Image
