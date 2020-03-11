@@ -11,7 +11,7 @@
                
                 <Setter Property="BackgroundColor" Value="Aqua"/>
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontSize" Value="Default"/>
+                
          
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="CornerRadius" Value="20"/>

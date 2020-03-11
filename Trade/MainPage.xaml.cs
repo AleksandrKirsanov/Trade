@@ -19,7 +19,7 @@ namespace Trade
 
 
             InitializeComponent();
-
+            Oglavlenie.FontSize = GlobalValue.MyFontSizeButton;
 
 
 
