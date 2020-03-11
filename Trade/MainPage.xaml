@@ -15,7 +15,7 @@
          
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="Margin" Value="1"/>
+                <Setter Property="Margin" Value="5,1,5,3"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -27,10 +27,10 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Image x:Name="Ris1" Margin="0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
+        <Image x:Name="Ris1" Margin="5,5,5,0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
         <Button Padding="1"  x:Name="Oglavlenie"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" Clicked="Oglavlenie_Clicked" />
 
 
