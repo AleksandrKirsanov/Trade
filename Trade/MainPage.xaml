@@ -31,7 +31,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Image x:Name="Ris1" Margin="5,5,5,0" Aspect="AspectFill"   Source="moneta640.jpg" Grid.Column="0" Grid.Row="0"/>
-        <Button Padding="1"  x:Name="Oglavlenie"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" Clicked="Oglavlenie_Clicked" />
+        <Button Padding="1"  x:Name="Oglavlenie"  Grid.Column="0" Grid.Row="1"  Text="Оглавление" Clicked="Oglavlenie_Clicked" FontSize="Small" />
 
 
     </Grid>

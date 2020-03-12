@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,9 @@ namespace Trade
         public App()
         {
             InitializeComponent();
-
+           
             MainPage = new NavigationPage(new MainPage());
+
         }
 
         protected override void OnStart()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,36 +14,11 @@ namespace Trade
     {
         public Content()
         {
+            
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
-            //Style buttonStyle = new Style(typeof(Button))
-            //{
-            //    Setters =
-            //{
-            //    new Setter
-            //    {
-            //        Property = Button.TextColorProperty,
-            //        Value = Color.FromRgb(0, 77, 64)
-            //    },
-            //    new Setter
-            //    {
-            //        Property = Button.BackgroundColorProperty,
-            //        Value = Color.Red
-            //    },
-            //    new Setter
-            //    {
-            //        Property = Button.FontSizeProperty,
-            //        Value = Device.GetNamedSize(NamedSize.Large, typeof(Button))
-            //    }
-
-                
-            //}
-                
-            //};
-
-
-            //Page2.Style = buttonStyle;
+           
 
 
         }

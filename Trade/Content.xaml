@@ -11,21 +11,21 @@
 
                 <Setter Property="BackgroundColor" Value="Aqua"/>
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontSize" Value="Micro"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <!--<Setter Property="FontAttributes" Value="Bold"/>-->
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="Margin" Value="2"/>
-                <Setter  Property="HeightRequest" Value="30"/>
+                <!--<Setter  Property="HeightRequest" Value="40"/>-->
 
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.Content>
+    <ContentPage.Content >
 
         <ScrollView>
 
-            <StackLayout BackgroundColor="WhiteSmoke" HeightRequest="20" >
+            <StackLayout  >
                 <Button Text="Оглавление" FontSize="Title" TextColor="LightGray" />
                 <Button x:Name="Page2" Text="Первая страница" Clicked="Page2_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>

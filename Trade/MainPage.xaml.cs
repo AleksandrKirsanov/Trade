@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Trade
 {
@@ -16,14 +17,21 @@ namespace Trade
         public MainPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-
-
             InitializeComponent();
-            Oglavlenie.FontSize = GlobalValue.MyFontSizeButton;
+            if (Preferences.ContainsKey("Str")) Nastrojki();
+
+
+           
+            
 
 
 
+        }
 
+        private async void Nastrojki()
+        {
+            GlobalValue.Page = Preferences.Get("Str", 1);
+            await Navigation.PushAsync(new Page_template(GlobalValue.Page));
         }
 
         private async void Oglavlenie_Clicked(object sender, EventArgs e)
