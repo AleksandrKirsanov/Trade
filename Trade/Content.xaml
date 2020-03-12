@@ -7,28 +7,29 @@
              x:Class="Trade.Content">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <!--<Style x:Name="buttonstyle" TargetType="Button">
+            <Style x:Name="buttonstyle" TargetType="Button">
 
                 <Setter Property="BackgroundColor" Value="Aqua"/>
                 <Setter Property="TextColor" Value="White"/>
-                <Setter x:Name="FontButton" Property="FontSize"/>
+                <Setter Property="FontSize" Value="Micro"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="Margin" Value="2"/>
-               
-            </Style>-->
+                <Setter  Property="HeightRequest" Value="30"/>
+
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
 
         <ScrollView>
 
-            <StackLayout BackgroundColor="WhiteSmoke">
+            <StackLayout BackgroundColor="WhiteSmoke" HeightRequest="20" >
                 <Button Text="Оглавление" FontSize="Title" TextColor="LightGray" />
                 <Button x:Name="Page2" Text="Первая страница" Clicked="Page2_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>
-                <Button x:Name="Page4" Text="Третья страница"></Button>
+                <Button x:Name="Page4" Text="Третья страница" ></Button >
             </StackLayout>
 
         </ScrollView>
