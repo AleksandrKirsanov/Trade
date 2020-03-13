@@ -33,7 +33,7 @@ namespace Trade
                     str1(); 
                     break;
                 default:
-                    str1();
+                    str0();
                     break;
             } 
 

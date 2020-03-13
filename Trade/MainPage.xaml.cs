@@ -18,8 +18,9 @@ namespace Trade
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            if (Preferences.ContainsKey("Str")) Nastrojki();
+            if (Preferences.ContainsKey("Str")) Nastrojki();// проверяет наличие сохранённого ключа 
 
+            
 
            
             
@@ -28,7 +29,7 @@ namespace Trade
 
         }
 
-        private async void Nastrojki()
+        private async void Nastrojki()// устанавливает глобальную переменную по сохранённому ключу и открыввает нужную страницу.
         {
             GlobalValue.Page = Preferences.Get("Str", 1);
             await Navigation.PushAsync(new Page_template(GlobalValue.Page));

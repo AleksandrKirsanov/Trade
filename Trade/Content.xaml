@@ -27,7 +27,7 @@
 
             <StackLayout  >
                 <Button Text="Оглавление" FontSize="Title" TextColor="LightGray" />
-                <Button x:Name="Page2" Text="Первая страница" Clicked="Page2_Clicked"></Button>
+                <Button x:Name="Page1" Text="Первая страница" Clicked="Page1_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>
                 <Button x:Name="Page4" Text="Третья страница" ></Button >
             </StackLayout>
