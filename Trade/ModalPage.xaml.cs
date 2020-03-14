@@ -17,7 +17,12 @@ namespace Trade
             InitializeComponent();
         }
 
-        private async void back_Clicked(object sender, EventArgs e)
+        private async void Proceed_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+        private async void Clear_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }

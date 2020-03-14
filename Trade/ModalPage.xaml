@@ -7,10 +7,11 @@
              x:Class="Trade.ModalPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Модальная страница!"
+            <Label Text="Хотите продолжить чтение?"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="back" Text="Сохранить" Clicked="back_Clicked"/>
+            <Button x:Name="Proceed" Text="Продолжить" Clicked="Proceed_Clicked"/>
+            <Button x:Name="Clear" Text="Начать заново" Clicked="Clear_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
