@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,22 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace Trade
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ModalPage : ContentPage
+    public partial class ModalPage1 : ContentPage
     {
-        public ModalPage()
+        public ModalPage1()
         {
             InitializeComponent();
         }
 
-        private async void Proceed_Clicked(object sender, EventArgs e)
+        private async void Setter_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
-        }
-
-        private async void Clear_Clicked(object sender, EventArgs e)
-        {
-            Preferences.Remove("Str");
-            await  Navigation.PopModalAsync();
         }
     }
 }

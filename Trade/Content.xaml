@@ -12,27 +12,39 @@
                 <Setter Property="BackgroundColor" Value="Aqua"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="FontSize" Value="Small"/>
-                <!--<Setter Property="FontAttributes" Value="Bold"/>-->
+              
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="Margin" Value="2"/>
-                <!--<Setter  Property="HeightRequest" Value="40"/>-->
+              
 
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.Content >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
         <ScrollView>
 
-            <StackLayout  >
+            <StackLayout Grid.Row="0" >
                 <Button Text="Оглавление" FontSize="Title" TextColor="LightGray" />
                 <Button x:Name="Page1" Text="Первая страница" Clicked="Page1_Clicked"></Button>
                 <Button x:Name="Page3" Text="Вторая страница"></Button>
                 <Button x:Name="Page4" Text="Третья страница" ></Button >
+
             </StackLayout>
-
         </ScrollView>
+        <Button x:Name="Setting" Text="Настройки" Clicked="Setting_Clicked" Grid.Row="1"/>
 
-    </ContentPage.Content>
+
+
+    </Grid>
+
+
+
+
 </ContentPage>

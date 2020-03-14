@@ -25,11 +25,18 @@ namespace Trade
 
 
         }
+        private async void Setting_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ModalPage1());
+        }
+
 
         private async void Page1_Clicked(object sender, EventArgs e)// Переход на первую страницу
         {
             GlobalValue.Page = 1;
             await Navigation.PushAsync(new Page_template(GlobalValue.Page)); ;
         }
+
+
     }
 }
