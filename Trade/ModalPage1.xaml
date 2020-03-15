@@ -7,10 +7,28 @@
              x:Class="Trade.ModalPage1">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Здесь будут находиться настройки приложения"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="Setter" Text="Готово" Clicked="Setter_Clicked"/>
+            <Grid >
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="500"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Button x:Name="FontPlus" Text="Больше" Clicked="FontPlus_Clicked" Margin="20"  />
+                    <Label x:Name="FontSizeLabel" Text="Размер шрифта"   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Button x:Name="FontMinus" Text="Меньше" Clicked="FontMinus_Clicked" Margin="20"/>
+                </StackLayout>
+
+
+                <Button x:Name="Setter" Text="Готово"
+                        Clicked="Setter_Clicked" Grid.Row="1"/>
+            </Grid>
+
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
